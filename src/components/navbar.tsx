@@ -1,6 +1,6 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Logo from "./logo"
 import { useRouter, usePathname } from 'next/navigation';
+import WalletConnectButton from './walletconnectbutton';
 
 const NavLinks = [
     {
@@ -47,7 +47,7 @@ const Navbar = () => {
                     )
                 })}
             </div>
-            <ConnectButton />
+            <WalletConnectButton />
         </header>
     )
 }
