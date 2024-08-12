@@ -11,8 +11,6 @@ interface DataItemProps {
 const DataItem = ({player, showToken}: DataItemProps ) => {
     const [showTrade, setShowTrade] = useState(false)
 
-    console.log("pooh, showTrade = ", showTrade)
-
     return (
         <tr className={`h-[80px] border-b border-[#00000010] ${showTrade ? 'bg-[#F9F7F7] text-[#099F8C]' : 'text-[#08401A]'}`}>
             {showToken && <th scope="row" className={`px-6 py-3 font-bold text-lg ${showTrade ? 'text-[#099F8C]' : 'text-[#105526]'}`}>

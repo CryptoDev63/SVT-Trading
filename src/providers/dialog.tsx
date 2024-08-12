@@ -4,7 +4,6 @@ const DialogContext = createContext<{
   isOpen: boolean
   content: ReactNode
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
-  setDialogContent: React.Dispatch<React.SetStateAction<ReactNode>>
   openDialog: () => void
 } | null>(null)
 
@@ -26,7 +25,7 @@ export const DialogProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <DialogContext.Provider
-      value={{ isOpen, content, setDialogContent, setIsOpen, openDialog }}
+      value={{ isOpen, content, setIsOpen, openDialog }}
     >
       {children}
     </DialogContext.Provider>
